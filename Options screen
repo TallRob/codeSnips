@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Options... \n 1. \n 2.. \n 3...");
+            string choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                case "1.":
+                    primary();
+                    break;
+                case "2":
+                case "2.":
+                    secondary();
+                    break;
+                case "3":
+                case "3.":
+                    break;
+                default:
+                    break;
+            }
+        }
+        static void primary()
+        {
+            Console.WriteLine("Primary");
+            Console.ReadLine();
+
+        }
+        static void secondary()
+        {
+            Console.WriteLine("Secondary");
+            Console.ReadLine();
+        }
+    }
+}
