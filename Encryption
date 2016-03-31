@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //word = Console.ReadLine();
+            string word = "hellz";
+            for (int i = 0; i < 5; i++)
+                if (((int)word[i] + 5) > 122)
+                    Console.WriteLine((char)(((int)word[i] + 5 - 26)));
+                else
+                    Console.Write((char)((int)word[i] + 5));
+            //   {
+            //       Console.WriteLine((int)word[i]);
+            //      Console.WriteLine((int)word[i] + 5);
+            //     Console.WriteLine((char)((int)word[i] + 1));
+            //Console.WriteLine(word[i]);
+            Console.ReadLine();
+        }
+
+    }
+}
