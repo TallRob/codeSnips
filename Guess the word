@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string target;
+            string guess;
+            string mask = "";
+            string temp = "";
+            int count = 0;
+            Console.WriteLine("Type a word to be guessed.");
+            target = Console.ReadLine();
+            for (int i = 0; i < target.Length; i++)
+            {
+                if (target[i] == ' ')
+                    mask = mask + "/ ";
+                
+                else
+                    mask = mask + "*";
+            }
+            Console.WriteLine(mask);
+            while (count < 3)
+            {
+                Console.WriteLine("Guess the word.");
+                Console.WriteLine(mask);
+                guess = Console.ReadLine();
+                temp = "";
+                for (int i = 0; i < target.Length; i++)
+                {
+                    if (guess[0] == target[i])
+                    {
+                        temp = temp + target[i];
+                    }
+                    else
+                    {
+                        temp = temp + mask[i];
+                    }
+                }
+                mask = temp;
+                if (mask == target)
+                {
+                }
+                for (int i = 0; i < target.Length; i++)
+                {
+
+                    if (guess[0] == target[i])
+                    {
+                        temp = temp + target[i];
+                    }
+                    else
+                    {
+                        temp = temp + mask[i];
+                    }
+
+                    if (guess == target)
+                    {
+                        Console.WriteLine("Correct \nYou're great!");
+                        count = 10;
+                        Console.ReadLine();
+                    }
+                    //else
+                        //Console.WriteLine("Incorrect \nTry again.");
+                    
+                }
+                
+                Console.ReadLine();
+            }
+        }
+    }
+}
