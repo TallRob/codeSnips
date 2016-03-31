@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string episode = "";
+            Question("Hello, how are you");
+            if (YesNo(Question("That's great! \nDo you like Harry Potter")))
+            {
+                Console.WriteLine("What's the latest Harry Potter Movie you've watched?");
+            }
+            else
+            {
+                Console.WriteLine("Why not? My favorite part is when Snape kills Dumbledoor.");
+            }
+            
+            episode = Console.ReadLine();
+            Question("Dobby dies in the sixth film. \nHow do you feel about this");
+            Console.ReadLine();
+            Console.WriteLine("Ha ha haa. Humans are funny.");
+            Console.ReadLine();
+            Question("What was your favourite part of" + episode + "");
+            Console.ReadLine();
+        }
+        static string Question(string question)
+        {
+            Console.WriteLine(question + "?");
+            return Console.ReadLine();
+            
+        }
+
+        static bool YesNo(string Answer)
+        {
+            switch (Answer)
+            {
+                case "yes":
+                case "ye":
+                case "yeah":
+                case "yar":
+                case "y":
+                    return true;
+                case "no":
+                case "nah":
+                case "nope":
+                case "nar":
+                case "n":
+                    return false;
+            }
+            return false;
+        }
+    }
+}
