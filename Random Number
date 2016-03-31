@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            while (true)
+            {
+                Random oRandom = new Random();
+                string move;
+                move = Convert.ToString(oRandom.Next(1, 6));
+                Console.Write(move);
+                Console.ReadLine();
+            }
+        }
+    }
+}
